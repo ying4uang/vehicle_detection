@@ -29,7 +29,7 @@ The main entrance is the process_image function in cell 16, which calls find car
 
 ### Histogram of Oriented Gradients (HOG)
 
-####1. Explain how (and identify where in your code) you extracted HOG features from the training images.
+#### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
 The code for this step is contained in the single_img_features() function.  I played around with the function paramters in cell 6(where you can see the output the image)
 
@@ -48,7 +48,7 @@ I tried various combinations of parameters such as colorspace 'RGB' and 'YCrCb' 
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-In cell 8, I trained a linear SVM using LinearSVC class under skilearn.svm.  Features(colorspace, spatial, histogram, hog) were extraced and concatenated using the extract features method first on cars images and non-car images. I then used the SVM libraries to train data and test on test set, the accuracy was about 0.9921.
+In cell 8, I trained a linear SVM using LinearSVC class under skilearn.svm.  Features(colorspace, spatial, histogram, hog) were extraced and concatenated using the extract_features() method first on cars images and non-car images. I then used the SVM libraries to train data and test on test set, the accuracy was about 0.9921.
 
 ### Sliding Window Search
 
@@ -85,5 +85,5 @@ I then assumed each blob corresponded to a vehicle.  I constructed bounding boxe
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-I have spent a lot of time tuning the parameters such as window size as I constantly have tree shadows detected as cars. To further imporve the result, I could average the results over the frames so the box sizes does not jump around.
+I have spent a lot of time tuning the parameters such as window size as I constantly have tree shadows detected as cars. To further imporve the result, I could average the results over the frames so the box sizes does not jump around so much. In addition, I want to search for better methodologies to deal with shadows and harsh weather conditions.
 
