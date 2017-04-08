@@ -1,0 +1,8 @@
+.DS_Store
+notcars.txt
+*.mp4
+non-vehicles
+vehicles
+vehicle_detection-Copy2.ipynb
+vehicle_detection.ipynb
+*.ipynb_checkpoints*
